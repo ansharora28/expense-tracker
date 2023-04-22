@@ -42,7 +42,7 @@ function addTransactionDOM(transaction) {
   const item = document.createElement("li");
   item.classList.add("plus");
   item.innerHTML = `
-    ${transaction.text} <span>${transaction.amount < 0 ? "-" : "+"}$${Math.abs(transaction.amount)}</span>
+    ${transaction.text} <span>$${Math.abs(transaction.amount)}</span><span>${transaction.date}</span><span>${transaction.category}</span>
     <button class="delete-btn" onclick="removeTransaction(${transaction.id})">x</button>
     `;
   list.appendChild(item);
